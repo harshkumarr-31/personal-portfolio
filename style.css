@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7fc;
+    color: #292735;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #6d5aa8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #292735;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8069bd;
+}
+
+.home {
+    min-height: 90vh;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+}
+
+.home-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.home-text h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.home-text h2 {
+    color: #8069bd;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.home-image {
+    flex: 1;
+    text-align: center;
+}
+
+.home-image img {
+    width: 500px;
+    height: 520px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #e7e0f5;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #8069bd;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #66519e;
+    transform: translateY(-3px);
+}
+
+
+section:not(.home) {
+    padding: 75px 8%;
+}
+
+section:not(.home) h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #6d5aa8;
+}
+
+
+#about {
+    background-color: #ffffff;
+}
+
+#about p {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+#education {
+    background-color: #f8f7fc;
+}
+
+table {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #e2ddef;
+    text-align: center;
+}
+
+th {
+    background-color: #8069bd;
+    color: white;
+}
+
+#skills {
+    background-color: #ffffff;
+}
+
+#skills ul {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+}
+
+#skills li {
+    background-color: #f4f0fb;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(109, 90, 168, 0.18);
+}
+
+#contact {
+    background-color: #ffffff;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 14px;
+    border: 1px solid #d8d1e5;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #8069bd;
+}
+
+button {
+    padding: 13px;
+    background-color: #8069bd;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #66519e;
+    transform: translateY(-2px);
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #6d5aa8;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #292735;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .home-text {
+        padding-right: 0;
+    }
+
+    .home-text h1 {
+        font-size: 36px;
+    }
+
+    #skills ul {
+        grid-template-columns: 1fr;
+    }
+
+    .home-image img {
+        width: 170px;
+        height: 170px;
+    }
+}
+#contact {
+    text-align: center;
+}
+
+#contact p{
+    text-align: center;
+}
+
+#contact form {
+    margin: 20px auto;
+}
+
+#contact .social-links {
+    text-align: center;
+}
